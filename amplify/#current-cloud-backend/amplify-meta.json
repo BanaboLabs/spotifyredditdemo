@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-banaboprod-dev-195152-authRole",
+      "UnauthRoleArn": "arn:aws:iam::376339060909:role/amplify-banaboprod-dev-195152-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::376339060909:role/amplify-banaboprod-dev-195152-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-banaboprod-dev-195152-deployment",
+      "UnauthRoleName": "amplify-banaboprod-dev-195152-unauthRole",
+      "StackName": "amplify-banaboprod-dev-195152",
+      "StackId": "arn:aws:cloudformation:us-east-2:376339060909:stack/amplify-banaboprod-dev-195152/615c7a80-1ce2-11ec-9ea5-024bc49acbba",
+      "AmplifyAppId": "d2lh2ozbkgunzf"
+    }
+  },
+  "function": {
+    "mylambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastDevBuildTimeStamp": "2021-09-24T04:14:25.519Z",
+      "lastBuildType": "PROD",
+      "lastBuildTimeStamp": "2021-09-24T04:29:52.790Z",
+      "lastPackageTimeStamp": "2021-09-24T04:29:53.739Z",
+      "distZipFilename": "mylambda-65354f6630453850632f-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-banaboprod-dev-195152-deployment",
+        "s3Key": "amplify-builds/mylambda-65354f6630453850632f-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-banaboprod-dev-195152-deployment/amplify-cfn-templates/function/mylambda-cloudformation-template.json",
+        "logicalId": "functionmylambda"
+      },
+      "lastPushTimeStamp": "2021-09-24T04:30:59.501Z",
+      "output": {
+        "Region": "us-east-2",
+        "Arn": "arn:aws:lambda:us-east-2:376339060909:function:mylambda-dev",
+        "Name": "mylambda-dev",
+        "LambdaExecutionRole": "banaboprodLambdaRolec2c246f7-dev"
+      },
+      "lastPushDirHash": "eczK6aJdaw/CcqTY65nEAix59s8="
+    }
+  },
+  "api": {
+    "myapi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "mylambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-banaboprod-dev-195152-deployment/amplify-cfn-templates/api/myapi-cloudformation-template.json",
+        "logicalId": "apimyapi"
+      },
+      "lastPushTimeStamp": "2021-09-24T04:30:59.495Z",
+      "output": {
+        "ApiName": "myapi",
+        "RootUrl": "https://mizm4sb0g8.execute-api.us-east-2.amazonaws.com/dev",
+        "ApiId": "mizm4sb0g8"
+      },
+      "lastPushDirHash": "sYpIJ+tWz5NJIaX+zJeHROUmZYQ="
+    }
+  }
+}

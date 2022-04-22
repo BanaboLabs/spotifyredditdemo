@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "ProximaNovaExtraBold";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.eot")
+      format("eot"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.svg")
+      format("svg"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.woff")
+      format("woff"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-extrabold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNovaBold";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-bold.eot")
+      format("eot"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-bold.svg")
+      format("svg"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-bold.woff")
+      format("woff"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-bold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNovaSemiBold";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-semibold.eot")
+      format("eot"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-semibold.svg")
+      format("svg"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-semibold.woff")
+      format("woff"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-semibold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-regular.eot")
+      format("eot"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-regular.svg")
+      format("svg"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-semibold.woff")
+      format("woff"),
+    url("https://banabowebfonts.s3.amazonaws.com/proxima-nova-regular.ttf")
+      format("truetype");
+}

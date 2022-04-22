@@ -1,0 +1,76 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "mylambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/items"
+        },
+        {
+            "name": "/auth0createuser",
+            "lambdaFunction": "mylambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/auth0createuser"
+        },
+        {
+            "name": "/auth0loginuser",
+            "lambdaFunction": "mylambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/auth0loginuser"
+        },
+        {
+            "name": "/auth0passwordreset",
+            "lambdaFunction": "mylambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/auth0passwordreset"
+        },
+        {
+            "name": "/auth0getlogincount",
+            "lambdaFunction": "mylambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/auth0getlogincount"
+        },
+        {
+            "name": "/test",
+            "lambdaFunction": "mylambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/test"
+        }
+    ],
+    "resourceName": "myapi",
+    "apiName": "myapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "mylambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-banaboprod-dev-195152-authRole",
+        "unAuthRoleName": "amplify-banaboprod-dev-195152-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "mylambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "759559d5"
+}

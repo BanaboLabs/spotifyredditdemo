@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-banaboprod-dev-195152-authRole",
+      "UnauthRoleArn": "arn:aws:iam::376339060909:role/amplify-banaboprod-dev-195152-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::376339060909:role/amplify-banaboprod-dev-195152-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-banaboprod-dev-195152-deployment",
+      "UnauthRoleName": "amplify-banaboprod-dev-195152-unauthRole",
+      "StackName": "amplify-banaboprod-dev-195152",
+      "StackId": "arn:aws:cloudformation:us-east-2:376339060909:stack/amplify-banaboprod-dev-195152/615c7a80-1ce2-11ec-9ea5-024bc49acbba",
+      "AmplifyAppId": "d2lh2ozbkgunzf"
+    },
+    "categories": {
+      "function": {
+        "mylambda": {
+          "deploymentBucketName": "amplify-banaboprod-dev-195152-deployment",
+          "s3Key": "amplify-builds/mylambda-65354f6630453850632f-build.zip"
+        }
+      }
+    }
+  }
+}

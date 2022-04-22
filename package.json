@@ -1,0 +1,75 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-apprunner": "^3.34.0",
+    "@aws-sdk/client-s3": "^3.6.1",
+    "@fullstory/browser": "^1.4.9",
+    "@headlessui/react": "^1.4.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/axios": "^0.14.0",
+    "@types/react-router-dom": "^5.3.3",
+    "aws-amplify": "^4.3.0",
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "circular-structure-stringify": "^1.0.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "flatted": "^3.2.2",
+    "framer-motion": "^4.1.17",
+    "history": "^5.3.0",
+    "json-stringify-safe": "^5.0.1",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.1",
+    "node-fetch": "^3.0.0",
+    "react": "^17.0.2",
+    "react-canvas-polygons": "1.1.22",
+    "react-dom": "^17.0.2",
+    "react-facebook-login": "^4.1.1",
+    "react-helmet": "^6.1.0",
+    "react-iframe": "^1.8.0",
+    "react-konva": "^17.0.2-5",
+    "react-leaflet": "^3.2.5",
+    "react-native-webview": "^11.17.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "4.0.3",
+    "react-sketch": "^0.5.1",
+    "react-transition-group": "^2.9.0",
+    "recharts": "^2.1.4",
+    "styled-components": "^5.3.1",
+    "universal-cookie": "^4.0.4",
+    "use-force-update": "^1.0.7",
+    "use-image": "^1.0.10",
+    "web-vitals": "^1.0.1",
+    "x-frame-bypass": "^1.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://127.0.0.1:5000",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
