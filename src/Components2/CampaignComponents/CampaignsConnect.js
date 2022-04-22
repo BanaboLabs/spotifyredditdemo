@@ -139,7 +139,7 @@ export default function CampaignsConnect() {
             <LogoGridWrapper>
               <LogoGridVStack>
                 <FacebookLogin
-                  appId="515364906844404"
+                  appId="333005582148546"
                   autoLoad={false}
                   fields="name,email,picture"
                   onClick={clickedFacebook}
