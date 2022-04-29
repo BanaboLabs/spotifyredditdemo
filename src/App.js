@@ -7,7 +7,6 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../src/Pages/LoginPage.js";
 import Home from "../src/Pages2/HomePage.js";
-import Amplify, { API } from "aws-amplify";
 import awsconfig from "./aws-exports";
 import styled from "styled-components";
 Amplify.configure(awsconfig);

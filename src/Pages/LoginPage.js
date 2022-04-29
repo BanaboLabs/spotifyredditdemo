@@ -31,7 +31,7 @@ export default function LoginPage() {
       emailAddress.value == "admin@banabo.io" &&
       password.value == "admin"
     ) {
-      window.open("https://application.banabo.io", "_self");
+      window.open("https://webapp.banabo.io", "_self");
       cookies.set("loginValid", "true", { path: "/" });
     } else {
       if (demo > 2) {

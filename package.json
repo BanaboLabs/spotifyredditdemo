@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@aws-sdk/client-apprunner": "^3.34.0",
-    "@aws-sdk/client-s3": "^3.6.1",
     "@fullstory/browser": "^1.4.9",
     "@headlessui/react": "^1.4.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -12,7 +10,6 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/axios": "^0.14.0",
     "@types/react-router-dom": "^5.3.3",
-    "aws-amplify": "^4.3.0",
     "axios": "^0.21.4",
     "body-parser": "^1.19.0",
     "circular-structure-stringify": "^1.0.6",
