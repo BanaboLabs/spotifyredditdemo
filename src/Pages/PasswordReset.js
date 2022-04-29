@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import sanfrancisco from "../Images/sanfrancisco.svg";
 import useInput from "../Components/CustomHooks/useInput.js";
-import Amplify, { API } from "aws-amplify";
 
 export default function PasswordReset() {
   const emailAddress = useInput("");

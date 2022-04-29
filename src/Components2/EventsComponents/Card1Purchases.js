@@ -28,7 +28,7 @@ export default function Card1Purchases(props) {
   const [highlight2, setHighlight2] = useState("Purchases");
   const [isShown, setIsShown] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [total, setTotal] = useState("829");
+  const [total, setTotal] = useState("83");
   /////////
   const [firstSpotAmount, setFirstSpotAmount] = useState("605");
   const [secondSpotAmount, setSecondSpotAmount] = useState("97");
@@ -41,12 +41,12 @@ export default function Card1Purchases(props) {
 
   useEffect(() => {
     if (highlight1 == "Custom") {
-      setFirstSpotAmount("605.2");
-      setSecondSpotAmount("97.3");
-      setThirdSpotAmount("89.6");
-      setFourthSpotAmount("24.2");
-      setFifthSpotAmount("12.8");
-      setSixthSpotAmount("89.6");
+      setFirstSpotAmount("41.1");
+      setSecondSpotAmount("33.6");
+      setThirdSpotAmount("11.9");
+      setFourthSpotAmount("9.2");
+      setFifthSpotAmount("6.7");
+      setSixthSpotAmount("4.6");
       setSeventhSpotAmount("24.2");
       setEightSpotAmount("12.8");
     }

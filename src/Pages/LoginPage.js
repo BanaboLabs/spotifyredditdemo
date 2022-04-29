@@ -4,7 +4,7 @@ import sanfrancisco from "../Images/sanfrancisco.svg";
 import { Link } from "react-router-dom";
 import useInput from "../Components/CustomHooks/useInput.js";
 import Cookies from "universal-cookie";
-import Amplify, { API } from "aws-amplify";
+
 import useMediaQuery from "../Components/CustomHooks/useMediaQuery";
 
 export default function LoginPage() {
@@ -123,36 +123,6 @@ export default function LoginPage() {
           },
         };
         // Login the user
-        await API.post("myapi", "/auth0loginuser", myInit, myHeaders)
-          .then((response) => {
-            // Grabs the source
-
-            setTimeout(
-              () => cookies.set("bearerToken", String(response), { path: "/" }),
-              10
-            );
-
-            setTimeout(() => secondFunction(cookies.get("bearerToken")), 20);
-
-            setTimeout(
-              () =>
-                API.post("myapi", "/auth0getlogincount", myInit2, myHeaders)
-                  .then((response) => {
-                    cookies.set("showCount", response.data[0].logins_count, {
-                      path: "/",
-                    });
-                    setShowSpinner(!showSpinner);
-                    setStep(2);
-                  })
-                  .catch((error) => console.log("error", error)),
-              30
-            );
-          })
-
-          .catch((error) => {
-            alert("Email or Password is incorrect");
-            setPresentSpinner(false);
-          });
       }
 
       getBearerToken();

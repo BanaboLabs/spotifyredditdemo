@@ -24,44 +24,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>2:05 PM</TheTime>
-                </DateVStack>
-              </DateRectangle>
-              <LogoIMG src={eventpath1} />
-            </PathHStack>
-            <PathHStack>
-              <DateRectangle>
-                <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>1:27 PM</TheTime>
-                </DateVStack>
-              </DateRectangle>
-              <LogoIMG src={eventpath2} />
-            </PathHStack>
-            <PathHStack>
-              <DateRectangle>
-                <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>1:23 PM</TheTime>
-                </DateVStack>
-              </DateRectangle>
-              <LogoIMG src={eventpath3} />
-            </PathHStack>
-            <PathHStack>
-              <DateRectangle>
-                <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>11:39 AM</TheTime>
-                </DateVStack>
-              </DateRectangle>
-              <LogoIMG src={eventpath4} />
-            </PathHStack>
-            <PathHStack>
-              <DateRectangle>
-                <DateVStack>
-                  <TheDate>Mar 14, 2021</TheDate>
-                  <TheTime>11:27 AM</TheTime>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>8:01 AM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath5} />
@@ -69,8 +33,44 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>9:26 AM</TheTime>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>7:05 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={eventpath2} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>5:38 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={eventpath3} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>4:34 AM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={eventpath4} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>9:56 PM</TheTime>
+                </DateVStack>
+              </DateRectangle>
+              <LogoIMG src={eventpath5} />
+            </PathHStack>
+            <PathHStack>
+              <DateRectangle>
+                <DateVStack>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>3:13 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath6} />
@@ -78,8 +78,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>6:09 AM</TheTime>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>1:23 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath7} />
@@ -87,8 +87,8 @@ export default function Purchases() {
             <PathHStack>
               <DateRectangle>
                 <DateVStack>
-                  <TheDate>Mar 14, 2022</TheDate>
-                  <TheTime>3:09 AM</TheTime>
+                  <TheDate>Apr 28, 2022</TheDate>
+                  <TheTime>12:53 PM</TheTime>
                 </DateVStack>
               </DateRectangle>
               <LogoIMG src={eventpath8} />

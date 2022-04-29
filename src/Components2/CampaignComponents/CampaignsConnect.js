@@ -212,11 +212,13 @@ export default function CampaignsConnect() {
                 <TheTitleText>Date Connected</TheTitleText>
                 <TheTitleText>Source</TheTitleText>
               </ChildHStack1>
-              <ChildHStack2>
-                <TheTitleText>Campaign Name</TheTitleText>
-                <TheTitleText>Budget</TheTitleText>
+              <ParentishStack>
+                <ChildHStack2>
+                  <TheTitleText>Campaign Name</TheTitleText>
+                  <TheTitleText>Budget</TheTitleText>
+                </ChildHStack2>
                 <TheTitleText1>Time Frame</TheTitleText1>
-              </ChildHStack2>
+              </ParentishStack>
             </ParentHStack>
           </HStackWrapper>
           <VStack>
@@ -232,12 +234,14 @@ export default function CampaignsConnect() {
                   </InnerHStack1>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>San Francisco Ad Buys</RegularText>
+                  <TheTextWrapper>
+                    <RegularText>San Francisco Ad Buys</RegularText>
+                  </TheTextWrapper>
                   <DarkGreenTextWrapper>
                     <DarkGreenText>$300</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText1>Apr 24 - Apr 30</RegularText1>
+                    <RegularText>Apr 24 - Apr 30</RegularText>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack2>
@@ -257,12 +261,14 @@ export default function CampaignsConnect() {
                   </InnerHStack2>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Software Focused Ads</RegularText>
+                  <TheTextWrapper>
+                    <RegularText>Software Focused Ads</RegularText>
+                  </TheTextWrapper>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText2>$740</DarkGreenText2>
+                    <DarkGreenText>$740</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText2>Apr 23 - Apr 30</RegularText2>
+                    <RegularText>Apr 23 - Apr 30</RegularText>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack2>
@@ -276,18 +282,20 @@ export default function CampaignsConnect() {
                   <RegularText>3/21/22</RegularText>
                   <InnerHStack3>
                     <GreenCircle>
-                      <BlackLetter>S</BlackLetter>
+                      <BlackLetter>F</BlackLetter>
                     </GreenCircle>
                     <CompanyNameText>FACEBOOK</CompanyNameText>
                   </InnerHStack3>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Facebook Campaign V1</RegularText>
+                  <TheTextWrapper>
+                    <RegularText>Facebook Campaign V1</RegularText>
+                  </TheTextWrapper>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText3>$790</DarkGreenText3>
+                    <DarkGreenText>$790</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText3>Apr 20 - Apr 30</RegularText3>
+                    <RegularText>Apr 20 - Apr 30</RegularText>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -307,12 +315,14 @@ export default function CampaignsConnect() {
                   </InnerHStack4>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>The Wave Campaign</RegularText>
+                  <TheTextWrapper>
+                    <RegularText>The Wave Campaign</RegularText>
+                  </TheTextWrapper>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText4>$860</DarkGreenText4>
+                    <DarkGreenText>$860</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText4>Apr 18 - Apr 30</RegularText4>
+                    <RegularText>Apr 18 - Apr 30</RegularText>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -332,12 +342,14 @@ export default function CampaignsConnect() {
                   </InnerHStack5>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Banabo Basic Ads</RegularText>
+                  <TheTextWrapper>
+                    <RegularText>Banabo Basic Ads</RegularText>
+                  </TheTextWrapper>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText5>$970</DarkGreenText5>
+                    <DarkGreenText>$970</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText5>Apr 13 - Apr 30</RegularText5>
+                    <RegularText>Apr 13 - Apr 30</RegularText>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -351,18 +363,20 @@ export default function CampaignsConnect() {
                   <RegularText>3/12/22</RegularText>
                   <InnerHStack6>
                     <GreenCircle>
-                      <BlackLetter>T</BlackLetter>
+                      <BlackLetter>G</BlackLetter>
                     </GreenCircle>
                     <CompanyNameText>GOOGLE ADS</CompanyNameText>
                   </InnerHStack6>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Ad Campaign V1</RegularText>
+                  <TheTextWrapper>
+                    <RegularText>Ad Campaign V1</RegularText>
+                  </TheTextWrapper>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText6>$700</DarkGreenText6>
+                    <DarkGreenText>$700</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText6>Apr 12 - Apr 30</RegularText6>
+                    <RegularText>Apr 12 - Apr 30</RegularText>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -377,6 +391,48 @@ export default function CampaignsConnect() {
     </PaddingDiv>
   );
 }
+
+const ChildHStack2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 122px;
+  padding-left: 5px;
+`;
+
+const ParentishStack = styled.div`
+  display: flex;
+  gap: 65px;
+`;
+
+const TheTextWrapper = styled.div`
+  display: flex;
+  width: 180px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+`;
+
+const DarkGreenTextWrapper = styled.div`
+  display: flex;
+  width: 60px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+`;
+
+const DarkGreenText = styled.div`
+  font-family: "ProximaNovaSemiBold";
+  font-size: 16px;
+  color: #00786a;
+`;
+
+const TimeFrameWrapper = styled.div`
+  display: flex;
+  width: 200px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+`;
 
 const ShadowImg = styled.img`
   box-shadow: 2px 5px 40px #eeeeee;
@@ -561,41 +617,6 @@ const RegularText6 = styled.div`
   color: #6a6986;
 `;
 
-const DarkGreenText2 = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-  padding-left: 5px;
-`;
-
-const DarkGreenText3 = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-  padding-left: 11px;
-`;
-
-const DarkGreenText4 = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-  padding-left: 15px;
-`;
-
-const DarkGreenText5 = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-  padding-left: 37px;
-`;
-
-const DarkGreenText6 = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-  padding-left: 5px;
-`;
-
 const ParentHStack3 = styled.div`
   display: flex;
   flex-direction: row;
@@ -676,33 +697,10 @@ const VStack = styled.div`
 
 const HStackWrapper2 = styled.div``;
 
-const DarkGreenTextWrapper = styled.div`
-  width: 100px;
-  justify-content: left;
-`;
-
-const DarkGreenText = styled.div`
-  font-family: "ProximaNovaSemiBold";
-  font-size: 16px;
-  color: #00786a;
-  padding-left: 8px;
-`;
-
-const TimeFrameWrapper = styled.div`
-  width: 200px;
-  justify-content: left;
-`;
-
 const ChildHStack3 = styled.div`
   display: flex;
   flex-direction: row;
   gap: 62px;
-`;
-
-const ChildHStack2 = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 100px;
 `;
 
 const InnerHStack1 = styled.div`

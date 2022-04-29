@@ -409,7 +409,7 @@ export default function TopRightCard() {
           <HStack>
             <TextGray1>Top 5</TextGray1>
             <BlueCircle1>
-              <ModalBlackSemiBold11>Mar 14</ModalBlackSemiBold11>
+              <ModalBlackSemiBold11>Apr 28</ModalBlackSemiBold11>
             </BlueCircle1>
           </HStack>
           <Spacer />
@@ -570,7 +570,7 @@ const HStack2 = styled.div`
 const BlueCircle1 = styled.div`
   background: #e4f2ff;
   border-radius: 4px;
-  width: 60.42px;
+  width: 65px;
   height: 20px;
   padding-right: 10px;
 `;

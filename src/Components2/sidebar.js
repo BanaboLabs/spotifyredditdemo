@@ -7,7 +7,7 @@ import TabHighlightedClear from "../Images2/tabhighlightedclear.svg";
 export default function SideBar(props) {
   // OnClick of Home, we want to change the font color and the background
 
-  const [highlight, setHighlight] = useState("Home");
+  const [highlight, setHighlight] = useState("Campaigns");
 
   useEffect(() => {
     props.sendToParent(highlight); // This is the mounting part
@@ -83,9 +83,11 @@ const VStack = styled.div`
 const IMG1 = styled.img`
   display: flex;
   position: absolute;
-  left: -75px;
-  top: -100px;
+  left: 30px;
+  top: -0px;
   cursor: pointer;
+  height: 22px;
+  width: auto;
 `;
 
 const TopWrapper = styled.div`

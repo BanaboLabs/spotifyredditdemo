@@ -9,7 +9,6 @@ import Login from "../src/Pages/LoginPage.js";
 import Home from "../src/Pages2/HomePage.js";
 import awsconfig from "./aws-exports";
 import styled from "styled-components";
-Amplify.configure(awsconfig);
 
 export default function App() {
   return (

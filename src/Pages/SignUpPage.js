@@ -8,7 +8,6 @@ import logo from "../Images/logobeta.svg";
 import { Link } from "react-router-dom";
 import useInput from "../Components/CustomHooks/useInput.js";
 import rightArrowWhite from "../Images/rightarrowsmallwhite.svg";
-import Amplify, { API } from "aws-amplify";
 
 export default function SignUpPage() {
   // All the user inputs
