@@ -225,7 +225,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack2>
                 <ChildHStack1>
-                  <RegularText>3/24/22</RegularText>
+                  <RegularText>4/24/22</RegularText>
                   <InnerHStack1>
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
@@ -252,7 +252,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack2>
                 <ChildHStack1>
-                  <RegularText>3/22/22</RegularText>
+                  <RegularText>4/22/22</RegularText>
                   <InnerHStack2>
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
@@ -279,7 +279,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>3/21/22</RegularText>
+                  <RegularText>4/21/22</RegularText>
                   <InnerHStack3>
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
@@ -306,7 +306,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>3/19/22</RegularText>
+                  <RegularText>4/19/22</RegularText>
                   <InnerHStack4>
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
@@ -333,7 +333,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>3/14/22</RegularText>
+                  <RegularText>4/14/22</RegularText>
                   <InnerHStack5>
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
@@ -360,7 +360,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>3/12/22</RegularText>
+                  <RegularText>4/12/22</RegularText>
                   <InnerHStack6>
                     <GreenCircle>
                       <BlackLetter>G</BlackLetter>
