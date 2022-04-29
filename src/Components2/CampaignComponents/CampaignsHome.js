@@ -104,9 +104,6 @@ export default function CampaignsHome() {
 
   return (
     <div>
-      <AbsolutePosition>
-        <ToggleSwitch toChild={isParentData} sendToParent={setIsParentData} />
-      </AbsolutePosition>
       {screen1 == false ? (
         <div>
           <CampaignsConnect />

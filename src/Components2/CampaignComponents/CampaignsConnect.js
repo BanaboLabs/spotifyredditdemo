@@ -7,66 +7,17 @@ import blackx from "../../Images2/blackx.svg";
 import logogrid from "../../Images2/logogrid.png";
 import BlurBackground2 from "../../Images2/BlurBackground2.png";
 import { AnimatePresence, motion } from "framer-motion/dist/framer-motion";
-import facebooksigninbutton from "../../Images2/facebooksigninbutton.png";
-import snapchatsigninbutton from "../../Images2/snapchatsigninbutton.png";
-import tiktoksigninbutton from "../../Images2/tiktoksigninbutton.png";
-import googlesigninbutton from "../../Images2/googlesigninbutton.png";
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
+import facebooksigninbutton from "../../Images2/facebookbuttonprod.png";
+import googlesigninbutton from "../../Images2/googlebuttonprod.png";
+import tiktoksigninbutton from "../../Images2/tiktokbuttonprod.png";
+import redditsigninbutton from "../../Images2/redditbuttonprod.png";
+import spotifysigninbutton from "../../Images2/spotifybuttonprod.png";
+import lightningon from "../../Images2/lightningon.svg";
+import lightningoff from "../../Images2/lightningoff.svg";
 
 export default function CampaignsConnect() {
   const [isShown, setIsShown] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
-  const jsonArray = [
-    {
-      CampaignDate: "2/12/22",
-      CampaignLetter: "S",
-      CampaignSource: "SNAPCHAT",
-      CampaignName: "Snapchat Easter Ads",
-      CampaignBudget: "$960",
-      CampaignTimeFrame: "Feb 3 - Mar 19",
-    },
-    {
-      CampaignDate: "2/12/22",
-      CampaignLetter: "S",
-      CampaignSource: "SNAPCHAT",
-      CampaignName: "Snapchat Stories Buy",
-      CampaignBudget: "$8120",
-      CampaignTimeFrame: "Feb 1 - Mar 31",
-    },
-    {
-      CampaignDate: "1/11/22",
-      CampaignLetter: "S",
-      CampaignSource: "SNAPCHAT",
-      CampaignName: "Snapchat Influencers",
-      CampaignBudget: "$1210",
-      CampaignTimeFrame: "Jan 9 - Jan 30",
-    },
-    {
-      CampaignDate: "1/9/22",
-      CampaignLetter: "G",
-      CampaignSource: "GOOGLE ADS",
-      CampaignName: "Search Campaign V1",
-      CampaignBudget: "$2310",
-      CampaignTimeFrame: "Jan 7 - Apr 17",
-    },
-    {
-      CampaignDate: "1/9/22",
-      CampaignLetter: "G",
-      CampaignSource: "GOOGLE ADS",
-      CampaignName: "Custom AdWords ",
-      CampaignBudget: "$12160",
-      CampaignTimeFrame: "Jan 3 - Apr 19",
-    },
-    {
-      CampaignDate: "1/7/22",
-      CampaignLetter: "T",
-      CampaignSource: "TIKTOK",
-      CampaignName: "TikTok Campaign One",
-      CampaignBudget: "$4400",
-      CampaignTimeFrame: "Jan 2 - Feb 6",
-    },
-  ];
 
   const variants = {
     hidden: { opacity: 0 },
@@ -111,8 +62,36 @@ export default function CampaignsConnect() {
     console.log(response);
   };
 
+  const facebook_client_id = "333005582148546"; // Banabo - API APP ID
+  const facebook_redirect_uri = "https://app.banabo.io/campaigns/connect";
+  const facebook_state = "foobarfacebook";
+  const facebook_scope = "ads_management";
+
+  const google_client_id =
+    "914021793896-ri83q4agqaag5tglc98h11tkcf7t9ai1.apps.googleusercontent.com";
+  const google_redirect_uri = "https://app.banabo.io/campaigns/connect/";
+  const google_state = "foobargoogle";
+  const google_access_type = "offline";
+  const google_scope = "email%20profile%20openid";
+  const google_response_type = "code";
+
+  const reddit_client_id = "iQwcHNSmzi17tdHSL4_80w"; // Banabo - API APP ID
+  const reddit_redirect_uri = "https://app.banabo.io/campaigns/connect/";
+  const reddit_state = "foobarreddit";
+  const reddit_response_type = "code";
+  const reddit_scope = "adsconversions";
+  const reddit_duration = "permanent";
+
+  const tiktok_client_id = "7089266317793984514"; // Banabo - API APP ID
+  const tiktok_state = "foobartiktok";
+
+  const spotify_client_id = "61d64c8895de42a68a7cd283c51ac037"; // Banabo - API APP ID
+  const spotify_redirect_uri = "https://webapp.banabo.io/";
+  const spotify_state = "foobarspotify";
+  const spotify_response_type = "code";
+  const spotify_scope = "streaming";
   return (
-    <div>
+    <PaddingDiv>
       {showModal ? (
         <MotionDiv
           initial="hidden"
@@ -131,29 +110,73 @@ export default function CampaignsConnect() {
                   Select a Marketing Channel to Connect With
                 </LargeBlackText>
                 <MediumGrayText>
-                  We’ll have you sign in directly with your marketing accounts.
-                  This is a one time process
+                  We’ll have you sign in directly with your <br /> advertising
+                  accounts. This is a one time process.
                 </MediumGrayText>
               </MiddleVStack>
             </ContentWrapper>
             <LogoGridWrapper>
               <LogoGridVStack>
-                <FacebookLogin
-                  appId="333005582148546"
-                  autoLoad={false}
-                  fields="name,email,picture"
-                  onClick={clickedFacebook}
-                  callback={responseFacebook}
-                  render={(renderProps) => (
-                    <LogoFormatFacebook
-                      src={facebooksigninbutton}
-                      onClick={renderProps.onClick}
-                    />
-                  )}
-                />
-                <LogoFormat src={snapchatsigninbutton} />
-                <LogoFormat src={tiktoksigninbutton} />
-                <LogoFormatGoogle src={googlesigninbutton} />
+                <TheMajorHStack>
+                  <LogoFormat
+                    src={spotifysigninbutton}
+                    onClick={() =>
+                      window.open(
+                        `https://accounts.spotify.com/authorize/?response_type=${spotify_response_type}&client_id=${spotify_client_id}&redirect_uri=${spotify_redirect_uri}&state=${spotify_state}&scope=${spotify_scope}`,
+                        "_self"
+                      )
+                    }
+                  />
+                  <ShadowImgNone src={lightningoff} />
+                </TheMajorHStack>
+                <TheMajorHStack>
+                  <LogoFormat
+                    src={redditsigninbutton}
+                    onClick={() =>
+                      window.open(
+                        `https://www.reddit.com/api/v1/authorize?response_type=${reddit_response_type}&client_id=${reddit_client_id}&redirect_uri=${reddit_redirect_uri}&state=${reddit_state}&scope=${reddit_scope}&duration=${reddit_duration}`,
+                        "_self"
+                      )
+                    }
+                  />
+                  <ShadowImgNone src={lightningoff} />
+                </TheMajorHStack>
+                <TheMajorHStack>
+                  <LogoFormat
+                    src={tiktoksigninbutton}
+                    onClick={() =>
+                      window.open(
+                        `https://ads.tiktok.com/marketing_api/auth?app_id=${tiktok_client_id}&state=${tiktok_state}&redirect_uri=https%3A%2F%2Fapp.banabo.io%2Fcampaigns%2Fconnect&rid=mtp6b07ttm`,
+                        "_self"
+                      )
+                    }
+                  />
+                  <ShadowImgNone src={lightningoff} />
+                </TheMajorHStack>
+                <TheMajorHStack>
+                  <LogoFormat
+                    src={facebooksigninbutton}
+                    onClick={() =>
+                      window.open(
+                        `https://www.facebook.com/v13.0/dialog/oauth?client_id=${facebook_client_id}&redirect_uri=${facebook_redirect_uri}&state=${facebook_state}&scope=${facebook_scope}`,
+                        "_self"
+                      )
+                    }
+                  />
+                  <ShadowImg src={lightningon} />
+                </TheMajorHStack>
+                <TheMajorHStack>
+                  <LogoFormat1
+                    src={googlesigninbutton}
+                    onClick={() =>
+                      window.open(
+                        `https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?nonce=12345&access_type=${google_access_type}&client_id=${google_client_id}&scope=${google_scope}&redirect_uri=${google_redirect_uri}&state=${google_state}&response_type=${google_response_type}`,
+                        "_self"
+                      )
+                    }
+                  />
+                  <ShadowImg src={lightningon} />
+                </TheMajorHStack>
               </LogoGridVStack>
             </LogoGridWrapper>
           </RectangleModal>
@@ -200,21 +223,21 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack2>
                 <ChildHStack1>
-                  <RegularText>2/12/22</RegularText>
+                  <RegularText>3/24/22</RegularText>
                   <InnerHStack1>
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                    <CompanyNameText>FACEBOOK</CompanyNameText>
                   </InnerHStack1>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Snapchat Easter Ads</RegularText>
+                  <RegularText>San Francisco Ad Buys</RegularText>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText>$960</DarkGreenText>
+                    <DarkGreenText>$300</DarkGreenText>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText1>Feb 3 - Mar 19</RegularText1>
+                    <RegularText1>Apr 24 - Apr 30</RegularText1>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack2>
@@ -225,21 +248,21 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack2>
                 <ChildHStack1>
-                  <RegularText>2/12/22</RegularText>
+                  <RegularText>3/22/22</RegularText>
                   <InnerHStack2>
                     <GreenCircle>
                       <BlackLetter>F</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                    <CompanyNameText>FACEBOOK</CompanyNameText>
                   </InnerHStack2>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Snapchat Stories Buy</RegularText>
+                  <RegularText>Software Focused Ads</RegularText>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText2>$8120</DarkGreenText2>
+                    <DarkGreenText2>$740</DarkGreenText2>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText2>Feb 1 - Mar 31</RegularText2>
+                    <RegularText2>Apr 23 - Apr 30</RegularText2>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack2>
@@ -250,21 +273,21 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>1/11/22</RegularText>
+                  <RegularText>3/21/22</RegularText>
                   <InnerHStack3>
                     <GreenCircle>
                       <BlackLetter>S</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>SNAPCHAT</CompanyNameText>
+                    <CompanyNameText>FACEBOOK</CompanyNameText>
                   </InnerHStack3>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Snapchat Influencers</RegularText>
+                  <RegularText>Facebook Campaign V1</RegularText>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText3>$1210</DarkGreenText3>
+                    <DarkGreenText3>$790</DarkGreenText3>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText3>Jan 9 - Jan 30</RegularText3>
+                    <RegularText3>Apr 20 - Apr 30</RegularText3>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -275,7 +298,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>1/9/22</RegularText>
+                  <RegularText>3/19/22</RegularText>
                   <InnerHStack4>
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
@@ -284,12 +307,12 @@ export default function CampaignsConnect() {
                   </InnerHStack4>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Search Campaign V1</RegularText>
+                  <RegularText>The Wave Campaign</RegularText>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText4>$4400</DarkGreenText4>
+                    <DarkGreenText4>$860</DarkGreenText4>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText4>Jan 7 - Apr 17</RegularText4>
+                    <RegularText4>Apr 18 - Apr 30</RegularText4>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -300,7 +323,7 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>1/9/22</RegularText>
+                  <RegularText>3/14/22</RegularText>
                   <InnerHStack5>
                     <GreenCircle>
                       <BlackLetter2>G</BlackLetter2>
@@ -309,12 +332,12 @@ export default function CampaignsConnect() {
                   </InnerHStack5>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>Custom AdWords</RegularText>
+                  <RegularText>Banabo Basic Ads</RegularText>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText5>$2310</DarkGreenText5>
+                    <DarkGreenText5>$970</DarkGreenText5>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText5>Jan 3 - Apr 19</RegularText5>
+                    <RegularText5>Apr 13 - Apr 30</RegularText5>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -325,21 +348,21 @@ export default function CampaignsConnect() {
             <HStackWrapper2>
               <ParentHStack3>
                 <ChildHStack1>
-                  <RegularText>1/7/22</RegularText>
+                  <RegularText>3/12/22</RegularText>
                   <InnerHStack6>
                     <GreenCircle>
                       <BlackLetter>T</BlackLetter>
                     </GreenCircle>
-                    <CompanyNameText>TIKTOK</CompanyNameText>
+                    <CompanyNameText>GOOGLE ADS</CompanyNameText>
                   </InnerHStack6>
                 </ChildHStack1>
                 <ChildHStack3>
-                  <RegularText>TikTok Campaign One</RegularText>
+                  <RegularText>Ad Campaign V1</RegularText>
                   <DarkGreenTextWrapper>
-                    <DarkGreenText6>$12160</DarkGreenText6>
+                    <DarkGreenText6>$700</DarkGreenText6>
                   </DarkGreenTextWrapper>
                   <TimeFrameWrapper>
-                    <RegularText6>Jan 2 - Feb 6</RegularText6>
+                    <RegularText6>Apr 12 - Apr 30</RegularText6>
                   </TimeFrameWrapper>
                 </ChildHStack3>
               </ParentHStack3>
@@ -351,9 +374,29 @@ export default function CampaignsConnect() {
           <LongBlueLine />
         </div>
       )}
-    </div>
+    </PaddingDiv>
   );
 }
+
+const ShadowImg = styled.img`
+  box-shadow: 2px 5px 40px #eeeeee;
+  border-radius: 10px;
+  height: 60px;
+  width: auto;
+`;
+
+const ShadowImgNone = styled.img`
+  height: 60px;
+  width: auto;
+`;
+
+const TheMajorHStack = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+`;
+
+const PaddingDiv = styled.div``;
 
 const LogoFormatFacebook = styled.img`
   height: 55px;
@@ -362,8 +405,17 @@ const LogoFormatFacebook = styled.img`
 `;
 
 const LogoFormat = styled.img`
-  height: 55px;
+  height: 60px;
   width: auto;
+  cursor: pointer;
+`;
+
+const LogoFormat1 = styled.img`
+  height: 60px;
+  width: auto;
+  box-shadow: 2px 5px 20px #e8e8e8;
+  border-radius: 10px;
+  cursor: pointer;
 `;
 
 const LogoFormatGoogle = styled.img`
@@ -376,7 +428,8 @@ const LogoFormatGoogle = styled.img`
 const LogoGridVStack = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  padding-top: 20px;
+  gap: 35px;
   padding-left: 20px;
 `;
 
@@ -444,16 +497,16 @@ const ClickIMG11 = styled.img`
   cursor: pointer;
   position: absolute;
   padding-top: 20px;
-  padding-left: 800px;
+  padding-left: 700px;
 `;
 
 const RectangleModal = styled.div`
   position: absolute;
-  left: 500px;
-  top: 120px;
+  left: 570px;
+  top: 90px;
   border-radius: 20px;
-  width: 840px;
-  height: 765px;
+  width: 746px;
+  height: 800px;
   background: linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
@@ -678,19 +731,19 @@ const ClickIMG2 = styled.img`
 `;
 
 const LargeBlackText = styled.div`
-  font-family: "ProximaNovaSemiBold";
+  font-family: "ProximaNovaBold";
   color: #252531;
-  font-size: 26px;
-  width: 300px;
-  line-height: 32px;
+  font-size: 42px;
+  width: 500px;
+  line-height: 51px;
 `;
 
 const MediumGrayText = styled.div`
   font-family: "ProximaNovaRegular";
-  font-size: 16px;
+  font-size: 21px;
   color: #9a99a9;
-  width: 340px;
-  line-height: 19px;
+  width: 500px;
+  line-height: 26px;
 `;
 
 const MiddleVStack = styled.div`

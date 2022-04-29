@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export default function ToggleSwitch(props) {
-  const [toggle, toggleSelected] = useState(true);
+  const [toggle, toggleSelected] = useState(false);
   const [rightvalue, rightValueSelected] = useState(true);
   const [widthvalue, widthValueSelected] = useState(true);
-  const [current, setCurrent] = useState(false);
+  const [current, setCurrent] = useState(true);
 
   useEffect(() => {
     rightValueSelected(!rightvalue);
@@ -19,20 +19,7 @@ export default function ToggleSwitch(props) {
     console.log(toggle);
   }, [toggle]);
 
-  return (
-    <ContentWrapper>
-      <Container
-        onClick={() => toggleSelected(!toggle)}
-        positionvalue={rightvalue}
-      >
-        <Button widthvalue={widthvalue}></Button>
-        <TextWrapper>
-          <Text1 positionvalue={rightvalue}>Custom</Text1>
-          <Text2 positionvalue={rightvalue}>Connect</Text2>
-        </TextWrapper>
-      </Container>
-    </ContentWrapper>
-  );
+  return <ContentWrapper></ContentWrapper>;
 }
 
 const ContentWrapper = styled.div`
